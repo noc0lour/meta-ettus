@@ -2,7 +2,7 @@ SUMMARY = "A TCP/IP Daemon simplifying the communication with GPS devices"
 SECTION = "console/network"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d217a23f408e91c94359447735bc1800"
-DEPENDS = "dbus dbus-glib ncurses python libusb1 chrpath-replacement-native pps-tools"
+DEPENDS = "dbus dbus-glib ncurses python libusb1 chrpath-replacement-native pps-tools bluez4"
 PROVIDES = "virtual/gpsd"
 
 EXTRANATIVEPATH += "chrpath-native"
@@ -23,7 +23,7 @@ SRC_URI = "${SAVANNAH_GNU_MIRROR}/${BPN}/${BP}.tar.gz \
 SRC_URI[md5sum] = "bc7467009b99e07ba461377b5da6c039"
 SRC_URI[sha256sum] = "504fc812f3c1525a1a48e04bf4d77f9a8066c201448d98089df89d58ef53a8cb"
 
-inherit scons update-rc.d python-dir pythonnative systemd bluetooth
+inherit scons update-rc.d python-dir pythonnative systemd 
 
 INITSCRIPT_NAME = "gpsd"
 INITSCRIPT_PARAMS = "defaults 35"
@@ -33,8 +33,6 @@ SYSTEMD_OESCONS = "${@base_contains('DISTRO_FEATURES', 'systemd', 'true', 'false
 export STAGING_INCDIR
 export STAGING_LIBDIR
 
-PACKAGECONFIG ??= "qt ${@base_contains('DISTRO_FEATURES', 'bluetooth', '${BLUEZ}', '', d)}"
-PACKAGECONFIG[bluez4] = "bluez='true',bluez='false',bluez4"
 PACKAGECONFIG[qt] = "qt='yes',qt='no',qt4-x11-free"
 EXTRA_OESCONS = " \
     sysroot=${STAGING_DIR_TARGET} \
