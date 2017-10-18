@@ -1,6 +1,8 @@
 This layer depends on:
 
 URI: git://git.openembedded.org/openembedded-core
+URI: https://github.com/no0lour/meta-readonly-rootfs-overlay
+
 branch: master
 revision: HEAD
 
