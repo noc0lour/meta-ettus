@@ -1,9 +1,9 @@
 # stock fstab - you probably want to override this with a machine specific one
 
-overlayfs            /                    auto       lowerdir=/media/rfs/ro,upperdir=/media/rfs/rw,rw,defaults 1 1 
-/dev/mmcblk0p2       /media/rfs/ro        ext4       ro,defaults        0       0 
-/dev/mmcblk0p3       /media/rfs/rw        ext4       defaults   0       0 
-/dev/mmcblk0p1       /media/FAT           auto       ro,defaults              0  0
+overlayfs            /                    auto       lowerdir=/media/rfs/ro,upperdir=/media/rfs/rw,rw,defaults                                                               0  1 
+/dev/mmcblk0p2       /media/rfs/ro        ext4       ro,defaults           0  0
+/dev/mmcblk0p1       /media/FAT           auto       ro,defaults           0  0
+/dev/mmcblk0p4       none                 swap       defaults,mode=0755    0  0
 proc                 /proc                proc       defaults              0  0
 devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
 usbdevfs             /proc/bus/usb        usbdevfs   noauto                0  0
