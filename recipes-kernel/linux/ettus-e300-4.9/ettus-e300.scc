@@ -1,0 +1,5 @@
+patch 0001-axi_fpga-Add-a-driver-to-test-AXI-interface-to-the-f.patch
+patch 0002-char-xilinx_xdevcfg-Added-a-notifier-interface.patch
+patch 0003-power-Add-support-for-NI-Ettus-Research-E3XX-PMU.patch
+patch 0004-regulator-e3xx-db-Adding-support-for-NI-USRP-E3XX-DB.patch
+kconf hardware ettus-e300.cfg
