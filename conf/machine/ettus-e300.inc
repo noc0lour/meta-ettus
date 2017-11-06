@@ -5,7 +5,7 @@
 MACHINEOVERRIDES = "ettus-e300:${MACHINE}"
 
 PREFERRED_PROVIDER_virtual/kernel ?= "linux-xlnx"
-PREFERRED_VERSION_linux-xlnx ?= "4.9"
+PREFERRED_VERSION_linux-xlnx ?= "2017.1"
 
 MACHINE_FEATURES = "vfat ethernet alsa usbhost bluetooth ext2 wifi"
 
